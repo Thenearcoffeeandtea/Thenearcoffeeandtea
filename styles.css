@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Pacifico&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5ece3;
+    font-family: 'Montserrat', sans-serif;
+}
+.header {
+    position: relative;
+    text-align: center;
+    background: url('/images/Nền\ trời.png') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.header-content {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    z-index: 2;
+}
+.logo img {
+    height: 100px;
+}
+.nav {
+    display: flex;
+    gap: 100px;
+}
+.nav a {
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.hero-text {
+    text-align: center;
+    color: white;
+    z-index: 3;
+    position: relative;
+}
+.hero-text h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 100px;
+    margin: 0;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.hero-text h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    margin: 10px 0 0 0;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.floating-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+.floating-images img {
+    position: absolute;
+    width: 80px;
+    animation: float 6s infinite ease-in-out;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10%;
+   }
+
+.section-content {
+    display: flex;
+    flex-direction: row; /* Ảnh bên trái - chữ bên phải */
+    align-items: center; /* Giữ mọi thứ ngang hàng */
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-image-wrapper {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-start; /* Dịch ảnh sang trái */
+    margin-right: 80px; /* TĂNG khoảng cách giữa ảnh và chữ */
+}
+.about-image {
+    width: 100%;
+    max-width: 350px; 
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-details {
+    flex: 2;
+    text-align: justify; /* Căn lề đều */
+    margin-left: 80px; /* Dịch chữ sang phải hơn */
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-family: 'Playfair Display',cursive;
+    font-size: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #8B5E3C;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+.special-text {
+    color: #D63384; /* Màu hồng tím (có thể thay đổi theo ý thích) */
+    font-size: 28px; /* Kích thước chữ lớn hơn */
+    font-weight: bold; /* Làm chữ đậm */
+    font-style: italic; /* Chữ nghiêng */
+    font-family: 'Dancing Script', cursive; /* Font chữ điệu mềm mại */
+    text-shadow: 3px 3px 6px rgba(214, 51, 132, 0.5); /* Tạo hiệu ứng nổi bật */
+    text-align: center; /* Căn giữa chữ */
+}
+
+.couple-section {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Tạo khoảng cách giữa chữ và ảnh */
+    gap: 80px; /* Khoảng cách giữa chữ và ảnh */
+    padding: 50px 10%;
+    flex-direction: row-reverse; /* Đổi vị trí: Ảnh TRÁI – Chữ PHẢI */
+}
+
+.couple-section .about-details {
+    flex: 1; /* Chữ chiếm 1 phần */
+    text-align: left; /* Chữ căn trái */
+    max-width: 45%; /* Để chữ gọn trong khoảng 45% */
+}
+
+.couple-section .about-image-wrapper {
+    flex: 1; /* Ảnh chiếm 1 phần */
+    text-align: left; /* Ảnh căn trái */
+    max-width: 45%; /* Ảnh gọn trong khoảng 45% */
+        margin-left: 50px; /* Dịch ảnh sang phải 5cm*/
+    
+    
+}
+
+.couple-section .about-image {
+    width: 100%; /* Đảm bảo ảnh hiển thị đầy đủ */
+    max-width: 450px; /* Giữ kích thước ảnh hợp lý */
+    border-radius: 12px; /* Bo góc nhẹ */
+}
+
+.couple-section .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.couple-section .text {
+    font-family: 'Playfair Display',cursive;
+    font-size: 16px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #8B5E3C;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    
+    
+}
+.special-text {
+    color: #D63384; /* Màu hồng tím (có thể thay đổi theo ý thích) */
+    font-size: 28px; /* Kích thước chữ lớn hơn */
+    font-weight: bold; /* Làm chữ đậm */
+    font-style: italic; /* Chữ nghiêng */
+    font-family: 'Dancing Script', cursive; /* Font chữ điệu mềm mại */
+    text-shadow: 3px 3px 6px rgba(214, 51, 132, 0.5); /* Tạo hiệu ứng nổi bật */
+    text-align: center; /* Căn giữa chữ */
+}
+/* Đáp ứng trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .couple-section {
+        flex-direction: column; /* Khi thu nhỏ, ảnh và chữ xếp dọc */
+        text-align: center;
+        gap: 40px; /* Giảm khoảng cách trên màn hình nhỏ */
+
+    }
+    
+    .couple-section .about-details, 
+    .couple-section .about-image-wrapper {
+        max-width: 100%; /* Để cả hai phần chiếm toàn bộ chiều rộng */
+        
+    }
+    .couple-section {
+        margin-left: 10px; /* Dịch toàn bộ phần tử sang phải 1cm */
+    }
+    
+
+    .couple-section .about-image {
+        width: 80%; /* Giảm kích thước ảnh trên màn hình nhỏ */
+    }
+    
+}
+.find-near {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    padding: 10px 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    position: relative;
+}
+
+.find-near i {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.find-near input {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    width: 100%;
+    color: white;
+    outline: none;
+}
+
+.find-near input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+/* Định dạng phần nội dung bài viết */
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa nội dung và hình ảnh */
+    margin-left: 90px; /* Dịch toàn bộ nội dung sang phải */
+}
+
+/* Định dạng tiêu đề "Khám phá góc nhỏ bình yên" */
+.blog-title {
+    font-family: 'Playfair Display', cursive;
+    font-size: 35px; /* Cỡ chữ to hơn, tạo điểm nhấn */
+    font-weight: 700; /* Đậm hơn nhưng vẫn mềm mại */
+    color: #5D3A00; /* Màu nâu đậm */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng nhẹ */
+    letter-spacing: 1px; /* Giãn chữ nhẹ tạo sự thanh thoát */
+    font-style: italic; /* Chữ nghiêng giúp điệu đà hơn */
+    text-align: left; /* Căn lề trái để hài hòa với nội dung */
+    margin-bottom: 15px; /* Tạo khoảng cách với đoạn văn dưới */
+}
+
+/* Định dạng nội dung văn bản */
+.blog-text {
+    flex: 1;
+    max-width: 600px;
+    width: 70%; /* Mở rộng phần chữ để có nhiều chữ hơn trên một dòng */
+    text-align: justify; /* Căn lề đều */
+    margin-left: 90px; /* Dịch riêng phần chữ sang phải */
+}
+
+/* Định dạng đoạn văn bản chung */
+.text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Playfair Display',cursive;
+    font-weight: 300;
+    color: #8B5E3C;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+}
+
+/* Dịch ảnh sang phải thêm 2cm (~60px) */
+.blog-image {
+    margin-left: 180px; /* 120px trước đó + 60px mới */
+}
+
+.blog-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+#tang-tret .section-content {
+    display: flex;
+    align-items: flex-start; /* Canh chữ lên trên */
+    justify-content: space-between;
+    padding: 50px calc(8% - 20px); /* Dịch sang trái 2cm */
+}
+
+#tang-tret .blog-image {
+    position: relative;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    margin-left: -20px; /* Dịch ảnh sang trái 2cm */
+}
+
+#tang-tret .blog-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+    #tang-tret .image-text {
+        position: absolute;
+        top: -25px; /* Đưa chữ lên trên ảnh, một chút so với vị trí ban đầu */
+        left: 0;
+        width: 100%;
+        text-align: left; /* Canh chữ về bên trái */
+        font-family: 'Playfair Display', cursive;
+        font-size: 42px;
+        font-weight: 700;
+        color: #a96313; /* Màu nâu đậm */
+        background: none; /* Không có nền */
+        padding: 10px 0;
+    }
+    
+    
+
+#tang-tret .blog-text {
+    width: 50%;
+    padding-left: 50px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    margin-left: -20px; /* Dịch chữ sang trái 2cm */
+}
+#tang-may-lanh .section-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 50px calc(8% - 20px); /* Dịch sang trái 2cm */
+}
+
+#tang-may-lanh .blog-image {
+    position: relative;
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    display: flex;
+    justify-content: center;
+}
+
+#tang-may-lanh .blog-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#tang-may-lanh .image-title {
+    position: absolute;
+    top: 20px; /* Điều chỉnh khoảng cách của tiêu đề từ trên */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Playfair Display', cursive;
+    font-size: 36px; /* Điều chỉnh kích thước chữ nếu cần */
+    font-weight: 700;
+    color: #ffffff; /* Màu chữ trắng để nổi bật trên nền ảnh */
+    background: rgba(0, 0, 0, 0.5); /* Nền bán trong suốt */
+    padding: 10px 0;
+}
+
+#tang-may-lanh .image-text {
+    position: absolute;
+    top: 50%; /* Đặt chữ ở giữa ảnh */
+    left: 0;
+    width: 100%;
+    text-align: left;
+    font-family: 'Playfair Display', cursive;
+    font-size: 24px; /* Điều chỉnh kích thước chữ nếu cần */
+    font-weight: 400;
+    color: #ffffff; /* Màu chữ trắng để nổi bật trên nền ảnh */
+    background: rgba(249, 241, 241, 0.5); /* Thêm nền bán trong suốt để chữ dễ đọc hơn */
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+#tang-may-lanh .blog-text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Playfair Display',cursive;
+    font-weight: 300;
+    color: #8B5E3C;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+}
+    
+#rooftop .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 6% 50px 6%; /* Giữ lề trái phải */
+}
+
+#rooftop .blog-image {
+    width: 48%; /* Kéo bề rộng ảnh ra một chút */
+    margin-left: 0.5cm; /* Dịch ảnh sang phải 0.5cm */
+}
+
+#rooftop .blog-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#rooftop .image-title {
+    font-family: 'Playfair Display', cursive;
+    font-size: 36px;
+    font-weight: 700;
+    color: #4B2E1C; /* Màu nâu đậm */
+    font-style: italic; /* Làm cho chữ in nghiêng */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: -1.5cm;
+}
+
+#rooftop .description-text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Playfair Display',cursive;
+    font-weight: 300;
+    color: #8B5E3C;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    margin-left: -2.5cm;
+}
+#contact-section {
+    text-align: left;
+    padding-left: 3cm; /* Tạo khoảng cách 3cm từ lề trái */
+    font-family: 'Arial', sans-serif; /* Font chữ giống các phần trên */
+}
+
+.contact-info p, .social-links p {
+    font-size: 16px; /* Đảm bảo cùng kích thước font với các phần trước */
+    line-height: 1.5;
+    font-family:'Playfair Display', cursive;
+}
+#lien-he {
+    padding-left: 2cm;
+}
+
+.social-links p {
+    font-size: 16px;
+    font-weight: bold; /* Làm đậm tên các mạng xã hội */
+}
+
+.highlight {
+    font-size: 16px;
+    font-style: italic; /* In nghiêng phần mô tả */
+    margin-top: 14px;
+    color: #333; /* Màu sắc phần mô tả */
+}

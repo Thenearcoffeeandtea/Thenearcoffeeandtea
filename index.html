@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Near Coffee & Tea</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".nav a").forEach(anchor => {
+                anchor.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+            document.getElementById("search-input").addEventListener("input", function() {
+                let keyword = this.value.toLowerCase();
+                document.querySelectorAll("main section").forEach(section => {
+                    if (section.innerText.toLowerCase().includes(keyword)) {
+                        section.style.display = "block";
+                    } else {
+                        section.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="/images/logo.jpg" alt="The Near Coffee & Tea">
+            </div>
+            <nav class="nav">
+                <a href="#goc-nho">Góc Nhỏ</a>
+                <a href="#san-pham">Sản Phẩm</a>
+                <a href="#bai-viet">Bài Viết</a>
+                <a href="#lien-he">Liên Hệ</a>
+                <div class="find-near">
+                    <i class="fa fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Find your Near">
+                </div>
+            </nav>
+        </div>
+        <div class="hero-text">
+            <h1>A cup of Peace</h1>
+            <h2>Find your Calm, Find your Near</h2>
+        </div>
+    </header>
+    <main>
+        <!-- Hero section -->
+        <section class="hero-section">
+        </section>
+        <!-- About section -->
+        <section class="about-section" id="goc-nho">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="/images/chậu hoa tách nền.png" alt="About" class="about-image">
+                </div>
+                <div class="about-details">
+                    <p class="special-text">Nơi một ly trà giúp bạn tìm lại bình yên giữa nhịp sống hối hả</p>
+                    <p class="text">"A cup of peace – Find your calm, find your Near" là một câu chuyện về việc tìm kiếm sự yên bình giữa nhịp sống hối hả, nơi mỗi ngụm trà hay cà phê không chỉ là một thức uống, mà là một cách để kết nối lại với chính mình. Tại "The Near," mỗi tách nước không chỉ mang lại sự tỉnh táo mà còn là nơi bạn có thể tìm lại sự bình yên trong tâm hồn. Bạn không cần phải đi đâu xa để tìm kiếm sự an yên – nó đã ở ngay gần, trong mỗi ngụm trà, trong mỗi khoảnh khắc ở quán.
+                </div>
+            </div>
+        </section>
+        <!-- Couple Section -->
+        <section class="couple-section">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="/images/ngồi remove.png" alt="Couple" class="about-image">
+                </div>
+                <div class="about-details">
+                    <p class="special-text">Khoảnh khắc yêu thương</p>
+                    <p class="text">"Find your Near" không chỉ là tìm một không gian, mà là tìm thấy chính mình trong sự tĩnh lặng, tìm lại sự thư thái mà đôi khi chúng ta bỏ quên giữa cuộc sống bận rộn. Mỗi lần bước vào quán, bạn như tìm thấy một phần bình yên trong chính con người mình.
+                </div>
+            </div>
+        </section>
+        <!-- Product Section -->
+        <section id="san-pham" class="product-section">
+            <h2 class="section-title">Sản phẩm</h2>
+            <p class="text">Khám phá các loại trà và cà phê mang đến sự thư giãn và tận hưởng.</p>
+        </section>
+      <!-- Blog Section -->
+<section id="bai-viet" class="blog-section">
+    <div class="section-content">
+        <div class="blog-text">
+            <p class="blog-title">Khám phá góc nhỏ bình yên</p>
+
+            <p class="text"><strong>Cơ sở đầu tiên:</strong> 1362 Trường Sa, phường 3, quận Tân Bình, TP.HCM</p>
+            <p class="text">
+                Giữa nhịp sống hối hả, đôi khi ta chỉ cần một không gian nhẹ nhàng để thả lỏng và tận hưởng những phút giây tĩnh lặng.
+                Với thiết kế tối giản nhưng tinh tế, nơi đây mang đến cảm giác ấm áp và gần gũi ngay từ khoảnh khắc đầu tiên.
+                Ánh sáng tự nhiên len lỏi qua từng góc nhỏ, hòa cùng những gam màu trung tính tạo nên bầu không khí thư thái.
+                Dù là để tập trung làm việc, đọc sách hay đơn giản là lặng yên bên tách cà phê, đây sẽ là góc nhỏ giúp bạn tìm lại sự cân bằng giữa bộn bề cuộc sống.
+            </p>
+        </div>
+        <div class="blog-image">
+            <img src="/images/chậu hoa sau.jpg" alt="Không gian quán" class="responsive-image">
+        </div>
+    </div>
+    <section id="tang-tret" class="blog-section">
+        <div class="section-content">
+            <div class="blog-image">
+                <p class="image-text">Tầng trệt</p>
+                <img src="/images/hai đứa uống.jpg"alt="Không gian tầng trệt" class="responsive-image">
+            </div>
+            <div class="blog-text">
+                <p class="text">
+                    Buổi sáng nhẹ nhàng, nắng len lỏi qua những tán cây xanh mướt, gió từ bờ kè khẽ mơn man như lời thì thầm dịu êm.
+                    Tầng trệt mở ra một không gian thoáng đãng, nơi hơi thở thiên nhiên hòa cùng hương cà phê nồng ấm.
+                    Không cần cầu kỳ, mọi thứ ở đây đều vừa vặn – từ chiếc bàn gỗ mộc mạc đến những góc nhỏ thân quen, 
+                    đủ để mỗi cuộc trò chuyện trở nên trọn vẹn hơn. Một nơi để nhâm nhi buổi sáng, thả mình vào những câu chuyện rộn ràng 
+                    hay đơn giản là lặng yên tận hưởng một ngày mới đầy hứng khởi.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="tang-may-lanh" class="blog-section">
+        <div class="section-content">
+            <div class="blog-image">
+                <p class="image-text">
+                    Bước lên tầng trên, không gian mở ra một cảm giác mát lành, dễ chịu. Những ô kính lớn đón trọn ánh sáng tự nhiên, khiến mọi góc nhỏ bừng lên nét tươi tắn và ấm áp. Từ đây, khung cảnh bờ kè hiện ra trong tầm mắt, vừa quen thuộc, vừa thơ mộng. Decor nhẹ nhàng, gần gũi, mang đến cảm giác thoải mái như ở nhà. Đây là góc lý tưởng cho những buổi chiều thư thả, ngồi bên ly cà phê, thả hồn theo dòng chảy thời gian, hoặc đơn giản là tận hưởng phút giây yên bình giữa nhịp sống thường nhật.
+                </p>
+                <img src="/images/không gian.jpg" alt="Không gian tầng máy lạnh" class="responsive-image">
+            </div>
+            <div class="blog-text">
+                <!-- Bạn có thể thêm nội dung thêm cho phần bài viết nếu cần -->
+            </div>
+        </div>
+    </section>
+    <section id="rooftop" class="blog-section">
+        <div class="section-content">
+            <div class="blog-image">
+                <img src="/images/tầng thượng.jpg" alt="Không gian rooftop" class="responsive-image">
+            </div>
+            <div class="blog-text">
+                <p class="image-title">Rooftop: Chạm gió trời, ôm trọn bình yên</p>
+                <p class="description-text">
+                    Trên cao, không gian mở ra rộng rãi, đón từng làn gió tự nhiên mát rượi. Từ đây, tầm mắt trải dài theo dòng bờ kè, nơi hàng cây xanh hai bên đung đưa dịu dàng trong nắng sớm hay ánh đèn chiều muộn. Khu vực bệt thoải mái, cho bạn tự do ngồi lại, tận hưởng phút giây thư giãn theo cách riêng. Dù là dưới bầu trời quang đãng hay những ngày mưa rơi tí tách, rooftop luôn có một góc dành cho bạn—nơi mọi khoảnh khắc đều trở nên an nhiên và trọn vẹn.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+        <!-- Contact Section -->
+        <section id="lien-he">
+            <div class="contact-info">
+                <p><strong>📍 Địa chỉ:</strong> 1362 Trường Sa, phường 3, quận Tân Bình</p>
+                <p><strong>📞 Liên hệ:</strong> 090xxxxxxx</p>
+            </div>
+            <div class="social-links">
+                <p><strong>🌿 Giữ liên lạc với The Near:</strong></p>
+                <p>Facebook | Instagram | TikTok</p>
+            </div>
+            <p class="highlight">☕ <em>Hương vị gần bạn</em> – Không gian thư giãn, ly cà phê đậm đà, khoảnh khắc trọn vẹn.</p>
+        </section>
+        
+    </main>
+</body>
+</html>
