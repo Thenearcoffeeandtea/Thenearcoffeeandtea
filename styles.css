@@ -8,7 +8,7 @@ body {
 .header {
     position: relative;
     text-align: center;
-    background: url('/images/Nền\ trời.png') center/cover no-repeat;
+    background: url('./images/Nền trời.png') center/cover no-repeat;
     height: 100vh;
     display: flex;
     flex-direction: column;
