@@ -9,7 +9,9 @@ body {
     position: relative;
     text-align: center;
     background: url('images/nen%20troi.png') center/cover no-repeat;
-    height: 100vh;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
